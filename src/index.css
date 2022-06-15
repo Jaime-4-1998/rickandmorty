@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgb(34,193,195);
+  background: radial-gradient(circle, rgb(148, 187, 233)  0%,#202d7c 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+ }
