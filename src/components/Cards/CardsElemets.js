@@ -36,6 +36,7 @@ export const Img = styled.img`
     height:100% !important;
     object-fit:cover !important;
     border-radius:5px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.68);
 `;
 export const CardTitle = styled.h2`
     font-size:2rem;
