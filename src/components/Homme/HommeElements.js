@@ -38,9 +38,10 @@ export const ParrContainer = styled.p`
 `;
 export const Button = styled(Link)`
     text-decoration:none;
-    background: #a3a8b7;
+    background: rgb(9,9,121);
+    background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 75%); 
     padding:14px 48px;
-    color: #000;
+    color: #fff;
     outline:none;
     border:none;
     cursor:pointer;
