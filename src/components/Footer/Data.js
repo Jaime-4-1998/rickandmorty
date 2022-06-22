@@ -1,3 +1,3 @@
 export const fott = {
-    ImgGan: require('../../images/0943209853.svg').default
+    ImgGan: require('../../images/542344365.svg').default
  };

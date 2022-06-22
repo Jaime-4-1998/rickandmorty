@@ -12,7 +12,7 @@ const Homme = ({ImgGan}) => {
           Para hacer el consumo de esta api, utilize axios haciendo uso de 
           async y await. Por ultimo para el diseño final implemente styled-components.  
         </ParrContainer>
-        <Button to="/InicioPer">Ver Personajes</Button>
+        <Button to="/Character">Ver Personajes</Button>
         <LinkBtn href="https://eljimmyramz.com/" target="_blank">El Jimmy Ramz</LinkBtn>
       </ContainerFirst>
       <ContainerSecond>

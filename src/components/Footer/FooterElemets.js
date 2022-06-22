@@ -12,12 +12,12 @@ export const FooterDiv = styled.div`
     }
 `;
 export const FooterImg = styled.img`
-    width:50% !important;
-    height:100% !important;
+    width: 100% !important;
+    height: auto !important;
     object-fit:cover;
     border-radius:5px;
     @media screen and (max-width:900px){
-        width:70% !important;
+        width:100% !important;
         margin-bottom:2rem;
     }
 `;

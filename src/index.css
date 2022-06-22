@@ -11,4 +11,12 @@ body {
   background: rgb(34,193,195);
   background: radial-gradient(circle, rgb(148, 187, 233)  0%,#000 100%);
   background-repeat: no-repeat;
- }
+}
+::selection {
+	color: #000;
+	background-color: #fff;
+}
+::-moz-selection {
+	color: #000;
+	background-color: #fff;
+}
