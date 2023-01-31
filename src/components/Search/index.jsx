@@ -4,6 +4,14 @@ const index = ({ setSearch }) => {
   const searchBtn = (e) => {
     e.preventDefault();
   };
+  const reex = (e,regex) => {
+    var theEvent = e || window.event;
+    var key = e.key;
+    if( !regex.test(key) ) {
+        theEvent.returnValue = false;
+        if (theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }
   return (
     //form to find the character
     <section>
@@ -16,6 +24,7 @@ const index = ({ setSearch }) => {
             }}
             placeholder="Buscar Personajes"
             type="text"
+            onKeyDown={(e) => reex(e,/([a-zA-Z])/)}
           />
         <button onClick={searchBtn} className='btn__api'>Buscar</button>
         </form>
