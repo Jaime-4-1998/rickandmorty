@@ -1,7 +1,11 @@
 import React, {useEffect,useState} from 'react'
 import axios from 'axios'
 import Pagination from '../Pagination/'
-import {CharacterTitle,ContainerChara,ParrStatus,ParrSpecies,ParrGender,Button} from './CharacterElements'
+import { BiBadgeCheck,BiMaleSign,BiFemaleSign } from 'react-icons/bi'
+import { SlClose,SlQuestion } from 'react-icons/sl'
+import { BsPersonCircle } from 'react-icons/bs'
+import { RiAliensFill,RiUserLocationFill } from 'react-icons/ri'
+import {CharacterTitle,ContainerChara,ParrStatusAlive,ParrStatusDead,ParrStatusUnk,ParrSpeciesHm,ParrSpeciesUnk,ParrSpeciesAl,ParrGender,ParrGenderFm,Button} from './CharacterElements'
 import {CardDesing,CardContent,CardImg,CardTitle,CardDescription,Img,CardAtributtes,CardStatus,CardType} from './CharacterElements'
 
 const Character = () => {
@@ -30,7 +34,7 @@ const Character = () => {
                 personajes.map(personaje =>(
                     <div key={personaje.id}>
                         <CardDesing href={`/personaje/${personaje.id}`}>
-                                <CardContent>
+                            <CardContent>
                                         <CardImg>
                                         <Img loading="lazy" src={personaje.image} alt={personaje.name} title={personaje.name} width="100" height="100"/>
                                         </CardImg>
@@ -38,26 +42,80 @@ const Character = () => {
                                             {personaje.name}
                                         </CardTitle>
                                         <CardDescription>
-                                            {personaje.location.name}
+                                            < RiUserLocationFill />  {personaje.location.name}  < RiUserLocationFill />
                                         </CardDescription>
                                         <CardAtributtes>
                                             <CardStatus>
-                                                <ParrStatus>
-                                                 Status: {personaje.status}
-                                                </ParrStatus>
-                                                <ParrSpecies>
-                                                Species: {personaje.species}
-                                                </ParrSpecies>
+                                            {
+                                            /*in this conditional show the the specie of the character*/
+                                                (() => {
+                                                    if (personaje.species === "Human") {
+                                                        return (
+                                                            <ParrSpeciesHm>
+                                                              <BsPersonCircle/> Es un Humano 
+                                                            </ParrSpeciesHm>
+                                                    );} else if (personaje.species === "Alien") {
+                                                        return (
+                                                            <ParrSpeciesAl>
+                                                                <RiAliensFill/> Es un Alien
+                                                            </ParrSpeciesAl>
+                                                    );} else {
+                                                        return (
+                                                            <ParrSpeciesUnk>
+                                                             < SlQuestion /> Especie desconocida
+                                                            </ParrSpeciesUnk>
+                                                    );}
+                                                })()
+                                            }
                                             </CardStatus>
                                             <CardType>
-                                                <ParrGender>
-                                                    Gender: {personaje.gender}
-                                                </ParrGender>
+                                                {
+                                                /*in this conditional show the the specie of the character*/
+                                                    (() => {
+                                                        if (personaje.gender === "Male") {
+                                                            return (
+                                                                <ParrGender>
+                                                                   <BiMaleSign/> Es un Hombre
+                                                                </ParrGender>
+                                                        );} else if (personaje.gender === "Female") {
+                                                            return (
+                                                                <ParrGenderFm>
+                                                                    <BiFemaleSign/> Es una Mujer
+                                                                </ParrGenderFm>
+                                                        );} else {
+                                                            return (
+                                                                <ParrSpeciesUnk>
+                                                                < SlQuestion /> Especie desconocida
+                                                                </ParrSpeciesUnk>
+                                                        );}
+                                                    })()
+                                                }
                                             </CardType>
                                         </CardAtributtes>
-                                    <Button href={`/personaje/${personaje.id}`}>View {personaje.name}</Button>
-                                </CardContent>
-                            </CardDesing>
+                                        {
+                                            /*in this conditional show the status of the character*/
+                                            (() => {
+                                                if (personaje.status === "Dead") {
+                                                    return (
+                                                        <ParrStatusDead>
+                                                        Personaje Muerto < SlClose/>
+                                                        </ParrStatusDead>
+                                                );} else if (personaje.status === "Alive") {
+                                                    return (
+                                                        <ParrStatusAlive>
+                                                        Personaje Viviendo < BiBadgeCheck/>
+                                                        </ParrStatusAlive>
+                                                );} else {
+                                                    return (
+                                                        <ParrStatusUnk>
+                                                        No se sabe si esta Vivo o Muerto < SlQuestion />
+                                                        </ParrStatusUnk>
+                                                );}
+                                            })()
+                                        }
+                                    <Button href={`/personaje/${personaje.id}`}>About {personaje.name}</Button>
+                            </CardContent>
+                        </CardDesing>
                     </div>
                 ))
             ) : ('Cargando Datos')}

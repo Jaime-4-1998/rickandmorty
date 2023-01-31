@@ -6,7 +6,7 @@ export const CharacterTitle = styled.h1`
 `;
 export const ContainerChara = styled.section`
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding:4rem;
     @media screen and (max-width:900px){
         grid-template-columns:1fr;
@@ -48,11 +48,8 @@ export const CardDescription = styled.p`
 `;
 
 export const CardAtributtes = styled.div`
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items: center;
-    text-align: center;
-    margin-bottom:1rem;
+    display:flex;
+    flex-direction:column;
 `;
 export const CardStatus = styled.div`
     width:100%;
@@ -60,23 +57,70 @@ export const CardStatus = styled.div`
 export const CardType = styled.div`
     width:100%;
 `;
-export const ParrStatus = styled.p`
+export const ParrStatusAlive = styled.p`
     color:#fff;
     margin-bottom:0.5rem;
+    background:#57c15a;
+    padding:0.5rem;
+    border-radius:10px;
+    text-align:center;
 `;
-export const ParrSpecies = styled.p`
+export const ParrStatusDead = styled.p`
     color:#fff;
     margin-bottom:0.5rem;
+    background:#ab0d2f;
+    padding:0.5rem;
+    border-radius:10px;
+    text-align:center;
+`;
+export const ParrStatusUnk = styled.p`
+    color:#fff;
+    margin-bottom:0.5rem;
+    background:#3e3b3d;
+    padding:0.5rem;
+    border-radius:10px;
+    text-align:center;
+`;
+export const ParrSpeciesUnk = styled.p`
+    color:#000;
+    margin-bottom:0.5rem;
+    background:#b7b3a8;
+    padding:0.5rem;
+    border-radius:10px;
+`;
+export const ParrSpeciesHm = styled.p`
+    color:#fff;
+    margin-bottom:0.5rem;
+    background:#5e5e5e;
+    padding:0.5rem;
+    border-radius:10px;
+`;
+export const ParrSpeciesAl = styled.p`
+    color:#fff;
+    margin-bottom:0.5rem;
+    background:#455b5e;
+    padding:0.5rem;
+    border-radius:10px;
 `;
 export const ParrGender = styled.p`
     color:#fff;
     margin-bottom:0.5rem;
+    background: #3591d8;
+    padding:0.5rem;
+    border-radius:10px;
+`;
+export const ParrGenderFm = styled.p`
+    color:#000;
+    margin-bottom:0.5rem;
+    background:#ff97d9;
+    padding:0.5rem;
+    border-radius:10px;
 `;
 export const Button = styled.a`
     color:#fff;
     text-decoration:none;
-    background: rgb(9,9,121);
-    background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 75%); 
+    background: transparent;
+    border:1px solid #f3f3f3;
     padding:1rem;
     text-align:center;
     border-radius:5px;

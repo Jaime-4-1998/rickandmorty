@@ -15,13 +15,13 @@ const Pagination = ({prev,next,onprev,onnext}) => {
         <ConatinerButton>
             {
                 prev ?(
-                    <PrevButton onClick={handleNextPage}>Previous</PrevButton>
+                    <PrevButton onClick={handleNextPage}>Pagina Anterior</PrevButton>
                 ) : null
             }
             {
                 next ? (
                     
-                    <NextButton onClick={handlePreviousPage}>Next</NextButton>
+                    <NextButton onClick={handlePreviousPage}>Pagina Siguiente</NextButton>
                 ) : null
             }
         </ConatinerButton>

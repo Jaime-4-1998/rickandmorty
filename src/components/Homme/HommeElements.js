@@ -38,8 +38,7 @@ export const ParrContainer = styled.p`
 `;
 export const Button = styled(Link)`
     text-decoration:none;
-    background: rgb(9,9,121);
-    background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 75%); 
+    background: #000;
     padding:14px 48px;
     color: #fff;
     outline:none;
@@ -65,7 +64,7 @@ export const Img = styled.img`
 `;
 export const LinkBtn = styled.a`
     text-decoration:none;
-    background: #000;
+    background: transparent;
     padding:14px 48px;
     color: #fff;
     outline:none;
@@ -74,6 +73,7 @@ export const LinkBtn = styled.a`
     align-items:center;
     transition:all 0.2s ease-in-out;
     border-radius:10px;
+    border:1px solid #f3f3f3;
     width:30%;
     font-weight:900;
     margin-left:1rem;

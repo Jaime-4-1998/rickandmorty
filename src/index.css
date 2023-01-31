@@ -8,9 +8,7 @@
   font-family: 'Ubuntu', sans-serif;
 }
 body {
-  background: rgb(34,193,195);
-  background: radial-gradient(circle, rgb(148, 187, 233)  0%,#000 100%);
-  background-repeat: no-repeat;
+  background: #171a4a;
 }
 ::selection {
 	color: #000;
