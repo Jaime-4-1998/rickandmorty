@@ -14,9 +14,9 @@ const Cards = ({ImgGan,ImgSec,ImgThree}) => {
                     Personajes
                 </CardTitle>
                 <CardDescription>
-                    Si das un clic en el Botón podras ver a todos los personajes de este universo.
+                    Clic para ver a los personajes de este universo.
                 </CardDescription>
-                <Button to="/InicioPer">Ver Personajes</Button>
+                <Button to="/Character">Ver Personajes</Button>
            </CardContent>
         </CardDesing>
         <CardDesing>
@@ -30,7 +30,7 @@ const Cards = ({ImgGan,ImgSec,ImgThree}) => {
                 <CardDescription>
                     Explora todas las localizaciones dando un clic en el siguiente Botón.
                 </CardDescription>
-                <Button to="/InicioPer">Ver Localizaciones</Button>
+                <Button to="/Locations">Ver Localizaciones</Button>
            </CardContent>
         </CardDesing>
         <CardDesing>

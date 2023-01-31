@@ -22,7 +22,7 @@ const index = ({ setSearch }) => {
             onChange={(e) => {
               setSearch(e.target.value);
             }}
-            placeholder="Buscar Personajes"
+            placeholder="Buscar Información"
             type="text"
             onKeyDown={(e) => reex(e,/([a-zA-Z])/)}
           />
