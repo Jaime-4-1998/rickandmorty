@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react'
 import axios from 'axios'
 import Pagination from '../Pagination/'
 import Search from '../Search/'
+import Navigation from '../Nav/Navigation'
 import { BiBadgeCheck,BiMaleSign,BiFemaleSign } from 'react-icons/bi'
 import { SlClose,SlQuestion } from 'react-icons/sl'
 import { BsPersonCircle } from 'react-icons/bs'
@@ -30,6 +31,7 @@ const Character = () => {
     }, [url]);
   return (
     <>
+    <Navigation />
     <CharacterTitle>Characters of Rick and Morty</CharacterTitle>
     <Search setSearch={setSearch}/>
         <ContainerChara>

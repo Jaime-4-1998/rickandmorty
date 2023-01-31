@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react'
 import axios from 'axios'
 import Pagination from '../Pagination/'
 import Search from '../Search/'
+import Navigation from '../Nav/Navigation'
 import {CharacterTitle,ContainerChara,CardParagrahp,CardDesingBord,CardContent,CardTitle,CardDescription} from './LocalesElements'
 
 const Locations = () => {
@@ -25,6 +26,7 @@ const Locations = () => {
     }, [url]);
   return (
     <>
+    <Navigation />
     <CharacterTitle>Locations of Rick and Morty</CharacterTitle>
     <Search setSearch={setSearch}/>
         <ContainerChara>
