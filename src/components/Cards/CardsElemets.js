@@ -11,7 +11,7 @@ export const ConatinerCardHead = styled.h2`
 `;
 export const ContainerCards = styled.section`
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
     padding:4rem;
     grid-gap:2rem;
     @media screen and (max-width:900px){
