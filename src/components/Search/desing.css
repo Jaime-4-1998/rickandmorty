@@ -35,3 +35,15 @@ form{
 ::placeholder{
     color: #fff !important;
 }
+@media screen and (max-width:900px) {
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .btn__api{
+        margin-top: 2rem;
+        width: 100%;
+        margin-left: 0rem;
+    }
+}
