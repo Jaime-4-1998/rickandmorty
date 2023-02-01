@@ -7,6 +7,9 @@ export const ContainerPerso = styled.section`
     margin:auto;
     margin-top:1rem;
     margin-bottom:1rem;
+    @media screen and (max-width:900px){
+        padding:2rem;
+    }
 `;
 export const CardImg = styled.div`
     max-width:100%;
